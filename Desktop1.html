@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main>
+            <img  class="logo" src="Imagenes/Frame 6.png">
+            <section class="texto">
+                <input type="text" id="texto-entrada" class="texto-entrada" required placeholder="Ingrese el texto aqui" onkeypress="return soloLetras(event)">
+            </section>
+            <section class="exclamation">
+                <img src="Imagenes/bi_exclamation-circle-fill.png"></img>
+                <label>Solo letras minúsculas y sin acentos</label>
+            </section>
+            <section class="botones">
+                <input type="submit" value="Encriptar" class="Encriptar" onclick="enviarTextoEncriptar()">
+                <input type="submit" value="Desencriptar" class="Desencriptar" onclick="enviarTextoDesencriptar()">
+            </section>
+            <section class="rectangulo">
+            </section>
+            <section class="alarma" id ="alarma" >
+                <label id="mensaje" class ="texto-oculto">Ningún mensaje fue encontrado</label>
+                <label id="texto-alarma" class="texto-alarma">Ingrese el texto que desea encriptar o desencriptar</label>
+            </section>
+            <img  id="muñeco" class="muñeco" src="Imagenes/Muñeco.png"></img>
+            <section class="texto-oculto" id="texto-oculto">
+                <label id="texto-salida" class ="texto-salida">texto-salida</label>
+                <input type="submit" value="Copiar" class="copiar" onclick="copiarAlPortapapeles('texto-salida')">
+            </section>
+        </main>
+    </body>
+</html>
